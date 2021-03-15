@@ -1,0 +1,21 @@
+<div class="form-group">
+        <input type="text" name="name" id="name" class="form-item" required>
+        <span></span>
+        <label for="name">Your name</label>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-item" required>
+        <span></span>
+        <label for="email">Email</label>
+    </div>
+    <div class="form-group">
+        <div class="select-wrapper">
+            <select name="services" id="services" class="form-item">
+            <option value="0" disabled  selected>Select current role</option>
+            <option>Teacher</option>
+            <option>Student</option>
+            <option>Part-time Learner</option>
+            </select>
+        </div>
+        <label for="services">Which option describe your role?</label>
+</div>

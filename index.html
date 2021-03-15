@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>ILMONLINE SURVEY</h1>
+            <h2 id="description">Thank you for taking the time to help us improve the platform</h2>
+        </div>
+        <div class="form-container">
+            <form  method="post">
+                <h3 class="personal-info">Personal Information</h3>
+                <div class="changediv">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" class="form-item required" required>
+                        <span></span>
+                        <label for="name">Your name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-item required" required>
+                        <span></span>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                          <select name="services" id="services" class="form-item">
+                            <option value="0" disabled  selected>Select current role</option>
+                            <option>Teacher</option>
+                            <option>Student</option>
+                            <option>Part-time Learner</option>
+                          </select>
+                        </div>
+                        <label for="services">Which option describe your role?</label>
+                      </div>
+                </div>
+            </form>
+            <div class="progress-div">
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="circle active">1</div>
+                    <div class="circle">2</div>
+                </div>
+                <button class="btn" id="prev" disabled>Prev</button>
+                <button class="btn" id="next">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

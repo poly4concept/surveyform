@@ -1,0 +1,51 @@
+<fieldset>
+      <legend>Would you recommend ILM ONLINE to a friend?</legend>
+
+      <p>
+        <label>
+          <input type="radio" name="recommend" value="Definitely">
+          Definitely
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="recommend" value="Maybe">
+          Maybe
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="recommend" value="Not sure">
+          Not sure
+        </label>
+      </p>
+</fieldset>
+<fieldset>
+    <legend>What feautures will you like to see improved?</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="improve-1" value="Fiqh">
+      Fiqh
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="improve-2" value="Shariah">
+        Shariah
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="improve-3" value="Arabic Language">
+        Arabic Language
+      </label>
+    </p>
+  </fieldset>
+  <div class="form-group comment">
+           <textarea name="comment" placeholder="Enter your comments here..." id="comments" cols="30" rows="10" class="input-textarea"></textarea>
+        <label for="suggestions">Comments</label>
+    </div>
+    <button type="submit"  name="submit">
+      Send Message
+    </button>

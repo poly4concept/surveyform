@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+:root{
+    --line-border-fill: rgba(230, 9, 9, 0.904);
+    --line-border-empty:  rgba(146, 58, 58, 0.295);
+}
+body{
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 65px;
+}
+.heading h1{
+    text-align: center;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    padding-top: 20px;
+    color: white;
+}
+.heading h2{
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+    margin-top: 2rem;
+    padding: 0 8vw ;
+}
+form h3{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.form-container{
+    background-color: #1a1a2cb0;
+    width: 60vw;
+    margin: 0 auto;
+    border-radius: 2%;
+    padding: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+.form-group{
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-top: 30px;
+}
+label, input, select, progress, meter,textarea {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 35px;
+  }
+  textarea{
+    height: 10em;
+  }
+  .comment{
+    margin-top: 40px;
+  }
+  input:hover, input:focus {
+    background-color: #eee;
+  }
+  .required + span {
+    position: relative;
+  }
+
+  .required:required + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: red;
+    padding: 5px 10px;
+    top: -55px;
+    right: -800px;
+  }
+
+  .required  + span::before {
+    position: absolute;
+    right: -840px;
+    top: -30px;
+  }
+
+  .required:invalid {
+    border: 2px solid red;
+  }
+
+  .required:invalid + span::before {
+    content: '✖';
+    color: red;
+  }
+  .required:valid + span::after{
+    content: '';
+  }
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  input[type="checkbox"] {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: red;
+    margin-right: 8px;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1em;
+    right: 0px;
+    top: -0.3em;
+    visibility: hidden;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+  }
+  
+
+.form-item{
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    border: 1px solid #ced4da;
+    padding: 0.375rem  0.75rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #495057;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out;
+}
+.form-item:focus, .form-item:valid{
+    outline: 0;
+    border-color: var(--main-color);
+}
+.form-group label{
+    position: absolute;
+    top: -27px;
+    left: -5px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+.form-group label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s ease-in-out;
+}
+.form-group input:focus + label span,
+.form-group input:valid + label span{
+    color: var(--main-color);
+    transform:  translateY(-20px);
+}
+select{
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+  }
+  .select-wrapper {
+    position: relative;
+  }
+
+  .select-wrapper::after {
+    content: "▼";
+    color: #495057;
+    font-size: 1rem;
+    top: 9px;
+    right: 10px;
+    position: absolute;
+  }
+  fieldset{
+      padding: 20px;
+      margin-top: 20px;
+  }
+  legend {
+    color: white;
+    background: rgb(27, 19, 19);
+    padding: 5px 10px;
+  }
+  fieldset label{
+      color: white;
+      display: inline-flex;
+  }
+  input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 10px;
+    margin-right: 8px;
+    border: 2px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    outline: none;
+  }
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1em;
+    transform: translate(-2px, -2px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+
+  input[type="radio"]:checked::before {
+    transform: translate(-2px, -2px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  }
+  button[type="submit"]{
+    background-color: rgb(218, 23, 23);
+    border: 0;
+    padding: 5px 10px;
+    color: #fff;
+    transition: all 0.4s ease-in;
+    border-radius: 50px;
+    width: 30%;
+    cursor: pointer;
+    font-weight: 900;
+}
+button[type="submit"]:active{
+    transform: scale(0.8);
+}
+button[type="submit"] i{
+    font-weight: 900;
+}
+  /*progress steps*/
+  .progress-div{
+    text-align: center;
+}
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 20%;
+    margin-top: 40px !important;
+    margin: 0 auto;
+    position: relative;
+}
+.progress-container::before{
+    content: '';
+    background-color: var( --line-border-empty);
+    height: 4px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-50%);
+}
+.progress {
+    background-color:  var( --line-border-fill);
+    height: 3px;
+    top: 50%;
+    left: 0;
+    width: 0;
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid   var( --line-border-empty);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.4s ease;
+    z-index: 5;
+}
+.circle.active {
+    border-color:   var( --line-border-fill);
+}
+.btn{
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 20px;
+    margin: 10px;
+    background-color:  var( --line-border-fill);
+    color: white;
+    font-size: small;
+    font-family: inherit;
+    cursor: pointer;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:disabled{
+    background-color:  var( --line-border-empty);
+    cursor: not-allowed;
+}
+
+
+@media screen and (max-width:991px){
+    .progress-container{
+        width: 50%;
+    }
+    .required:required + span::after {
+        top: -55px;
+        right: -280px;
+      }
+    
+      .required  + span::before {
+        position: absolute;
+        right: -320px;
+        top: -30px;
+      }
+      button[type="submit"]{
+        width: 60%;
+        padding: 5px 10px;
+    }
+}
